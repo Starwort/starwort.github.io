@@ -8,3 +8,4 @@
 - Or my [Advent of Code](https://adventofcode.com)
   - [2019](https://github.com/Starwort/advent-of-code-2019)
 - [ActiveLearn book to PDF downloader](./pearsondownloader.html)
+- [Animal Crossing: New Horizons progress tracker NookData](https://nookdata.anvil.app/)
