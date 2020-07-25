@@ -142,5 +142,5 @@ However, there are rules you must follow while you are here.
 
     ## Any and all appeals must be sent through the appeals form
 
-    If you are banned, muted, or warned and you feel that this is unfair, submit an appeal through [the appeals form](https://prepare2dye.anvil.app/#appeal). ***If you attempt to message a member of staff directly, your appeal will be denied***
+    If you are banned, muted, or warned and you feel that this is unfair, submit an appeal through [the appeals form](https://prepare2dye.anvil.app/#appeal). ***If you attempt to message a member of staff directly, your appeal will be denied.***
     </details>
