@@ -1,4 +1,6 @@
-<title>I make stuff | starwort.github.io</title>
+---
+title: I make stuff | starwort.github.io
+---
 
 # Welcome to starwort.github.io
 

@@ -1,0 +1,51 @@
+---
+---
+
+// Headers
+$header-heading-color: #fff;
+$header-bg-color: #bb86fc;
+$header-bg-color-secondary: #03dac6;
+
+// Text
+$section-headings-color: #bb86fc;
+$body-text-color: #ffffff;
+$body-link-color: #03dac6;
+$blockquote-text-color: #aaaaaa;
+
+// Code
+$code-bg-color: rgba(255, 255, 255, 5%);
+$code-text-color: #ffffff;
+
+// Borders
+$border-color: rgba(255,255,255,5%);
+$table-border-color: #bb86fc;
+$hr-border-color: #bb86fc;
+
+@import "{{ site.theme }}";
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+pre, code {
+    font-family: "Source Code Pro" !important;
+}
+body {
+    background-color: #121212;
+}
+.highlight {
+    background-color: #00000000;
+}
+#skip-to-content {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    overflow: hidden;
+    top: -10px;
+  
+    &:focus {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        height: auto;
+        width: auto;
+        background: invert($body-link-color);
+        outline: thick solid invert($body-link-color);
+    }
+}
