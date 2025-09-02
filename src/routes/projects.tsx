@@ -20,7 +20,7 @@ export default function Projects() {
                 This library is a port of the original JavaScript library.
             </>}
             tags={[
-                <Python />
+                <Python />,
             ]}
         >
             <IconButton

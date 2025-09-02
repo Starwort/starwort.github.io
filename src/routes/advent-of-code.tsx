@@ -2,7 +2,7 @@ import {Title} from "@solidjs/meta";
 import {Launch} from "@suid/icons-material";
 import {Card, CardActions, CardContent, IconButton, Typography} from "@suid/material";
 import {ProjectCard} from "~/components/ProjectCard";
-import {GitHub, Python} from "~/extra_icons";
+import {C, GitHub, Python, Rust} from "~/extra_icons";
 import {createMasonry} from "~/hooks/masonry";
 
 
@@ -43,7 +43,7 @@ export default function AdventOfCode() {
                 over 274,000 participants.
             </>}
             tags={[
-                <Python />
+                <Python />,
             ]}
         >
             <IconButton
@@ -61,7 +61,7 @@ export default function AdventOfCode() {
                 manage the leaderboard.
             </>}
             tags={[
-                <Python />
+                <Python />,
             ]}
         >
             <IconButton
@@ -80,7 +80,8 @@ export default function AdventOfCode() {
                 307,000 participants.
             </>}
             tags={[
-                <Python />
+                <Python />,
+                <Rust />,
             ]}
         >
             <IconButton
@@ -98,7 +99,7 @@ export default function AdventOfCode() {
                 manage the leaderboard.
             </>}
             tags={[
-                <Python />
+                <Python />,
             ]}
         >
             <IconButton
@@ -117,7 +118,8 @@ export default function AdventOfCode() {
                 307,000 participants.
             </>}
             tags={[
-                <Python />
+                <Python />,
+                <Rust />,
             ]}
         >
             <IconButton
@@ -135,7 +137,7 @@ export default function AdventOfCode() {
                 manage the leaderboard.
             </>}
             tags={[
-                <Python />
+                <Python />,
             ]}
         >
             <IconButton
@@ -154,7 +156,7 @@ export default function AdventOfCode() {
                 over 219,000 participants.
             </>}
             tags={[
-                <Python />
+                <Python />,
             ]}
         >
             <IconButton
@@ -173,7 +175,7 @@ export default function AdventOfCode() {
                 over 168,000 participants.
             </>}
             tags={[
-                <Python />
+                <Python />,
             ]}
         >
             <IconButton
@@ -192,7 +194,8 @@ export default function AdventOfCode() {
                 116,000 participants.
             </>}
             tags={[
-                <Python />
+                <Python />,
+                <C />,
             ]}
         >
             <IconButton
@@ -211,7 +214,7 @@ export default function AdventOfCode() {
                 over 100,000 participants.
             </>}
             tags={[
-                <Python />
+                <Python />,
             ]}
         />
         <ProjectCard
@@ -224,7 +227,7 @@ export default function AdventOfCode() {
                 2nd.
             </>}
             tags={[
-                <Python />
+                <Python />,
             ]}
         />
     </main>;
