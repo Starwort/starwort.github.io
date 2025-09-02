@@ -106,5 +106,29 @@ export default function Education() {
             ]}
             masonryItem={item}
         />
+        <ProjectCard
+            title="Freelance - Web Developer"
+            url="https://fawltyat50.co.uk/"
+            description={<>
+                <Typography variant="subtitle1" color="text.secondary" sx={{
+                    mt: -1,
+                    mb: 1,
+                }}>
+                    May 2025 - Present
+                </Typography>
+                <Typography variant="body1">
+                    I designed and implemented a website for the book <cite>
+                        The Legacy of Fawlty Towers
+                    </cite>. The website is written with TypeScript and CSS in
+                    the SolidJS framework and conforms to the Material Design
+                    guidelines for layout.
+                </Typography>
+            </>}
+            tags={[
+                <TypeScript />,
+                "SolidJS",
+            ]}
+            masonryItem={item}
+        />
     </main>;
 }
