@@ -158,13 +158,13 @@ export default function App() {
                             </ListItem>
                             <ListItem disablePadding>
                                 <ListItemButton
-                                    selected={props.location.pathname == "/jobs"}
+                                    selected={props.location.pathname == "/employments"}
                                     component={A}
-                                    href="/jobs"
+                                    href="/employments"
                                 >
                                     <ListItemIcon>
                                         <Show
-                                            when={props.location.pathname == "/jobs"}
+                                            when={props.location.pathname == "/employments"}
                                             fallback={<WorkOutline />}
                                         >
                                             <Work />

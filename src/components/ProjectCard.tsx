@@ -9,7 +9,7 @@ interface ProjectInfo {
     description: string | JSX.Element;
     children?: JSX.Element;
     tags: JSX.Element[];
-    masonryItem: Directive<MasonryItemDirective>;
+    masonryItem?: Directive<MasonryItemDirective>;
 }
 
 const MaybeActionArea: Component<{

@@ -37,6 +37,18 @@ export const C = createSvgIcon(
     ),
     'C'
 );
+export const CXX = createSvgIcon(
+    () => (
+        <path d="M11.92 9.88a3 3 0 100 4.24l1.42 1.42a5 5 0 110-7.08ZM3 17l9 5 9-5V7L12 2 3 7Zm9.5-4.5v-1h1v-1h1v1h1v1h-1v1h-1v-1Zm4 0v-1h1v-1h1v1h1v1h-1v1h-1v-1Z" />
+    ),
+    'CXX'
+);
+export const Haskell = createSvgIcon(
+    () => (
+        <path d="M2.08,19L6.75,12L2.08,5H5.58L10.25,12L5.58,19H2.08M6.75,19L11.42,12L6.75,5H10.25L19.59,19H16.09L13.17,14.63L10.25,19H6.75M18.03,14.92L16.5,12.58H21.92V14.92H18.03M15.7,11.42L14.14,9.08H21.92V11.42H15.7Z" />
+    ),
+    'Haskell'
+);
 export const CSharp = createSvgIcon(
     () => (
         <path d="M11.92 9.88a3 3 0 100 4.24l1.42 1.42a5 5 0 110-7.08ZM3 17l9 5 9-5V7L12 2 3 7Zm11.125-1.25.375-1.5h-1l.375-1.5h1l.375-1.5h-1l.375-1.5h1L16 8.25h1l-.375 1.5h1L18 8.25h1l-.375 1.5h1l-.375 1.5h-1l-.375 1.5h1l-.375 1.5h-1l-.375 1.5h-1l.375-1.5h-1l-.375 1.5zm1.75-3h1l.375-1.5h-1z" />
