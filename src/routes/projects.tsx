@@ -515,5 +515,22 @@ export default function Index() {
                 "SolidJS",
             ]}
         />
+        <ProjectCard
+            title="This Website"
+            description={<>
+                The website you are looking at right now!
+            </>}
+            tags={[
+                <TypeScript />,
+                "SolidJS",
+            ]}
+        >
+            <IconButton
+                component="a"
+                href="https://github.com/Starwort/starwort.github.io"
+            >
+                <GitHub />
+            </IconButton>
+        </ProjectCard>
     </main>;
 };;
