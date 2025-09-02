@@ -11,9 +11,9 @@ export default function Index() {
             </Typography>
             <Typography variant="body1" paragraph>
                 I am both autistic and transgender, and my interests include
-                programming, gaming, and <Link href="https://esolangs.org/wiki/Main_Page">
+                programming, gaming, <Link href="https://esolangs.org/wiki/Main_Page">
                     esolangs
-                </Link>.
+                </Link>, and code golf.
             </Typography>
             <Typography variant="body1" paragraph>
                 This website functions as a CV and portfolio of my work, as well

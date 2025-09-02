@@ -1,9 +1,9 @@
-type Directive<T> = T extends true | undefined
+export type Directive<T> = T extends true | undefined
     ? (element: HTMLElement, value?: () => T) => void
     : (element: HTMLElement, value: () => T) => void;
 
-type MasonryContainerDirective = true;
-type MasonryItemDirective = true;
+export type MasonryContainerDirective = true;
+export type MasonryItemDirective = true;
 
 declare module "solid-js" {
     namespace JSX {

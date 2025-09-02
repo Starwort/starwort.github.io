@@ -120,6 +120,25 @@ export default function App() {
                             </ListItem>
                             <ListItem disablePadding>
                                 <ListItemButton
+                                    selected={props.location.pathname == "/advent-of-code"}
+                                    component={A}
+                                    href="/advent-of-code"
+                                >
+                                    <ListItemIcon>
+                                        <Show
+                                            when={props.location.pathname == "/advent-of-code"}
+                                            fallback={<TreeOutlined />}
+                                        >
+                                            <Tree />
+                                        </Show>
+                                    </ListItemIcon>
+                                    <ListItemText
+                                        primary="Advent of Code"
+                                    />
+                                </ListItemButton>
+                            </ListItem>
+                            <ListItem disablePadding>
+                                <ListItemButton
                                     selected={props.location.pathname == "/education"}
                                     component={A}
                                     href="/education"
@@ -153,25 +172,6 @@ export default function App() {
                                     </ListItemIcon>
                                     <ListItemText
                                         primary="My Employments"
-                                    />
-                                </ListItemButton>
-                            </ListItem>
-                            <ListItem disablePadding>
-                                <ListItemButton
-                                    selected={props.location.pathname == "/advent-of-code"}
-                                    component={A}
-                                    href="/advent-of-code"
-                                >
-                                    <ListItemIcon>
-                                        <Show
-                                            when={props.location.pathname == "/advent-of-code"}
-                                            fallback={<TreeOutlined />}
-                                        >
-                                            <Tree />
-                                        </Show>
-                                    </ListItemIcon>
-                                    <ListItemText
-                                        primary="Advent of Code"
                                     />
                                 </ListItemButton>
                             </ListItem>

@@ -1,68 +1,16 @@
 import {Title} from "@solidjs/meta";
-import {Launch} from "@suid/icons-material";
-import {Box, Card, CardActionArea, CardActions, CardContent, IconButton, Link, Typography} from "@suid/material";
-import {Component, For, JSX, Show} from "solid-js";
+import {IconButton, Link} from "@suid/material";
+import {ProjectCard} from "~/components/ProjectCard";
 import {C, CSharp, GitHub, JavaScript, Python, React, Rust, TypeScript} from "~/extra_icons";
-import {createMasonry} from "~/masonry";
+import {createMasonry} from "~/hooks/masonry";
 
-const {item, container} = createMasonry();
 
-interface ProjectInfo {
-    title: JSX.Element;
-    url?: string;
-    description: string | JSX.Element;
-    children?: JSX.Element;
-    tags: JSX.Element[];
-}
-
-const MaybeActionArea: Component<{
-    url?: string;
-    children: JSX.Element;
-}> = (props) => <Show when={props.url} fallback={props.children}>
-    <CardActionArea component="a" href={props.url}>
-        {props.children}
-    </CardActionArea>
-</Show>;
-
-const ProjectCard: Component<ProjectInfo> = (props) => {
-    return <Card variant="elevation" sx={{gridColumn: "span 4"}} ref={item}>
-        <MaybeActionArea url={props.url}>
-            <CardContent>
-                <Typography variant="h5" component="div" gutterBottom>
-                    {props.title}
-                </Typography>
-                <Typography variant="body1">
-                    {props.description}
-                </Typography>
-            </CardContent>
-        </MaybeActionArea>
-        <CardActions>
-            {props.children}
-            <Show when={props.url}>
-                <IconButton component="a" href={props.url} target="_blank">
-                    <Launch />
-                </IconButton>
-            </Show>
-            <Box sx={{flexGrow: 1}} />
-            <For each={props.tags}>{tag => (
-                <Box sx={{
-                    p: 1,
-                    ml: '0 !important',
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center"
-                }}>
-                    {tag}
-                </Box>
-            )}</For>
-        </CardActions>
-    </Card>;
-};
-
-export default function Index() {
+export default function Projects() {
+    const {item, container} = createMasonry();
     return <main use:container>
         <Title>My Projects</Title>
         <ProjectCard
+            masonryItem={item}
             title="WanaKana-Python"
             url="https://pypi.org/project/wanakana-python/"
             description={<>
@@ -83,6 +31,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title={<>
                 <cite>MOLEK-SYNTEZ</cite> Solitaire Solver
             </>}
@@ -106,6 +55,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title={<>
                 <cite>Little Man Computer</cite> Simulator
             </>}
@@ -129,6 +79,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="Computer Science Notes"
             url="/computer-science/"
             description={<>
@@ -142,6 +93,7 @@ export default function Index() {
             ]}
         />
         <ProjectCard
+            masonryItem={item}
             title="YAIM; Yet Another I18n Manager"
             url="https://starbright.dyndns.org/yaim/"
             description={<>
@@ -161,6 +113,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="TriPeaks Solitaire Solver"
             description={<>
                 A TriPeaks solver written in Rust. Algorithm based on one by
@@ -179,6 +132,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="NookData"
             url="/nookdata"
             description={<>
@@ -201,6 +155,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="Ability Miner"
             description={<>
                 A high-performance tool for brute-forcing gear seeds for the
@@ -223,6 +178,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="Turing Machine Simulator"
             description={<>
                 A program to simulate an arbitrary Turing machine based on a
@@ -242,6 +198,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="StackCell Esolang"
             url="https://esolangs.org/wiki/StackCell"
             description={<>
@@ -260,6 +217,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="Minesweeprs"
             description={<>
                 A probabilistic minesweeper solver, based on <Link
@@ -280,6 +238,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="Domgen"
             url="https://pypi.org/project/domgen/"
             description={<>
@@ -298,6 +257,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="Dice Calculator"
             description={<>
                 A dice distribution calculator supporting both simple and
@@ -317,6 +277,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="SorbetReforges"
             description={<>
                 A mod for Terraria modifying the modifier system in line with
@@ -342,6 +303,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="Quantum Werewolf"
             url="/quantum-werewolf/"
             description={<>
@@ -365,6 +327,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="BingoBoardCore"
             description={<>
                 A Terraria mod which adds the core functionality for Bingo and
@@ -383,6 +346,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="BingoSyncGoalPack"
             description={<>
                 The default goal pack for BingoBoardCore. Currently unfinished.
@@ -399,6 +363,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title={<code>aoc_helper</code>}
             url="https://pypi.org/project/aoc-helper/"
             description={<>
@@ -418,6 +383,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="Tile Touching Challenge"
             description={<>
                 A Terraria mod which instantly kills the player if they touch
@@ -444,6 +410,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="Tangleword"
             url="/tangleword/"
             description={<>
@@ -468,6 +435,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="Gerrymandering"
             url="/gerrymandering/"
             description={<>
@@ -503,6 +471,7 @@ export default function Index() {
             </IconButton>
         </ProjectCard>
         <ProjectCard
+            masonryItem={item}
             title="Fawlty at Fifty - The Legacy of Fawlty Towers (website)"
             url="fawltyat50.co.uk"
             description={<>
@@ -516,6 +485,7 @@ export default function Index() {
             ]}
         />
         <ProjectCard
+            masonryItem={item}
             title="This Website"
             description={<>
                 The website you are looking at right now!
