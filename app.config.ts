@@ -10,5 +10,8 @@ export default defineConfig({
                 autoname: true,
             }),
         ]
+    },
+    server: {
+        prerender: {crawlLinks: true},
     }
 });
