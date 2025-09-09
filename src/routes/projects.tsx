@@ -1,7 +1,7 @@
 import {Title} from "@solidjs/meta";
-import {IconButton, Link} from "@suid/material";
+import {Link} from "@suid/material";
 import {ProjectCard} from "~/components/ProjectCard";
-import {C, CSharp, GitHub, JavaScript, Python, React, Rust, TypeScript} from "~/extra_icons";
+import {C, CSharp, JavaScript, Python, React, Rust, SolidJS, TypeScript} from "~/extra_icons";
 import {createMasonry} from "~/hooks/masonry";
 
 
@@ -20,16 +20,10 @@ export default function Projects() {
                 This library is a port of the original JavaScript library.
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/wanakana-py"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/wanakana-py"
+        />
         <ProjectCard
             masonryItem={item}
             title={<>
@@ -43,17 +37,11 @@ export default function Projects() {
                 science qualification.
             </>}
             tags={[
-                <C />,
-                <Python />,
+                [<C />, "C"],
+                [<Python />, "Python"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/NEA"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/NEA"
+        />
         <ProjectCard
             masonryItem={item}
             title={<>
@@ -67,17 +55,11 @@ export default function Projects() {
                 built using React and TypeScript.
             </>}
             tags={[
-                <TypeScript />,
-                <React />,
+                [<TypeScript />, "TypeScript"],
+                [<React />, "React"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/lmc"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/lmc"
+        />
         <ProjectCard
             masonryItem={item}
             title="Computer Science Notes"
@@ -88,8 +70,8 @@ export default function Projects() {
                 via GitHub Pages.
             </>}
             tags={[
-                <Python />,
-                <JavaScript />,
+                [<Python />, "Python"],
+                [<JavaScript />, "JavaScript"],
             ]}
         />
         <ProjectCard
@@ -101,17 +83,11 @@ export default function Projects() {
                 application, built using TypeScript, React, and Electron.
             </>}
             tags={[
-                <TypeScript />,
-                <React />,
+                [<TypeScript />, "TypeScript"],
+                [<React />, "React"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/yaim"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/yaim"
+        />
         <ProjectCard
             masonryItem={item}
             title="TriPeaks Solitaire Solver"
@@ -121,16 +97,10 @@ export default function Projects() {
                 improve performance.
             </>}
             tags={[
-                <Rust />,
+                [<Rust />, "Rust"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/tripeak_solver"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/tripeak_solver"
+        />
         <ProjectCard
             masonryItem={item}
             title="NookData"
@@ -143,17 +113,11 @@ export default function Projects() {
                 fully offline after the first load.
             </>}
             tags={[
-                <TypeScript />,
-                <React />,
+                [<TypeScript />, "TypeScript"],
+                [<React />, "React"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/nookdata"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/nookdata"
+        />
         <ProjectCard
             masonryItem={item}
             title="Ability Miner"
@@ -167,16 +131,10 @@ export default function Projects() {
                 original C implementation.
             </>}
             tags={[
-                <Rust />,
+                [<Rust />, "Rust"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/ability-miner"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/ability-miner"
+        />
         <ProjectCard
             masonryItem={item}
             title="Turing Machine Simulator"
@@ -187,16 +145,10 @@ export default function Projects() {
                 >Pest</Link> for parsing.
             </>}
             tags={[
-                <Rust />,
+                [<Rust />, "Rust"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/turing-machine"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/turing-machine"
+        />
         <ProjectCard
             masonryItem={item}
             title="StackCell Esolang"
@@ -206,16 +158,10 @@ export default function Projects() {
                 programming language.
             </>}
             tags={[
-                <Rust />,
+                [<Rust />, "Rust"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/stackcell"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/stackcell"
+        />
         <ProjectCard
             masonryItem={item}
             title="Minesweeprs"
@@ -227,16 +173,10 @@ export default function Projects() {
                 </Link>, which was originally written in Python 2.
             </>}
             tags={[
-                <Rust />,
+                [<Rust />, "Rust"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/minesweeprs"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/minesweeprs"
+        />
         <ProjectCard
             masonryItem={item}
             title="Domgen"
@@ -246,16 +186,10 @@ export default function Projects() {
                 objects.
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/domgen"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/domgen"
+        />
         <ProjectCard
             masonryItem={item}
             title="Dice Calculator"
@@ -266,16 +200,10 @@ export default function Projects() {
                 </Link> for parsing.
             </>}
             tags={[
-                <Rust />,
+                [<Rust />, "Rust"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/dice-calculator"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/dice-calculator"
+        />
         <ProjectCard
             masonryItem={item}
             title="SorbetReforges"
@@ -292,16 +220,10 @@ export default function Projects() {
                 </Link>.
             </>}
             tags={[
-                <CSharp />,
+                [<CSharp />, "C#"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/SorbetReforges"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/SorbetReforges"
+        />
         <ProjectCard
             masonryItem={item}
             title="Quantum Werewolf"
@@ -315,17 +237,11 @@ export default function Projects() {
                 a game invented by Steven Irrgang.
             </>}
             tags={[
-                <TypeScript />,
-                "SolidJS",
+                [<TypeScript />, "TypeScript"],
+                [<SolidJS />, "SolidJS"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/quantum-werewolf"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/quantum-werewolf"
+        />
         <ProjectCard
             masonryItem={item}
             title="BingoBoardCore"
@@ -335,16 +251,10 @@ export default function Projects() {
                 added by plugin mods.
             </>}
             tags={[
-                <CSharp />,
+                [<CSharp />, "C#"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/BingoBoardCore"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/BingoBoardCore"
+        />
         <ProjectCard
             masonryItem={item}
             title="BingoSyncGoalPack"
@@ -352,16 +262,10 @@ export default function Projects() {
                 The default goal pack for BingoBoardCore. Currently unfinished.
             </>}
             tags={[
-                <CSharp />,
+                [<CSharp />, "C#"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/BingoSyncGoalPack"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/BingoSyncGoalPack"
+        />
         <ProjectCard
             masonryItem={item}
             title={<code>aoc_helper</code>}
@@ -372,16 +276,10 @@ export default function Projects() {
                 solution templating, and running practice puzzles.
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/aoc_helper"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/aoc_helper"
+        />
         <ProjectCard
             masonryItem={item}
             title="Tile Touching Challenge"
@@ -399,16 +297,10 @@ export default function Projects() {
                 </Link>.
             </>}
             tags={[
-                <CSharp />,
+                [<CSharp />, "C#"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/TileTouchingChallenge"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/TileTouchingChallenge"
+        />
         <ProjectCard
             masonryItem={item}
             title="Tangleword"
@@ -423,17 +315,11 @@ export default function Projects() {
                 interactive version.
             </>}
             tags={[
-                <TypeScript />,
-                "SolidJS",
+                [<TypeScript />, "TypeScript"],
+                [<SolidJS />, "SolidJS"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/tangleword"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/tangleword"
+        />
         <ProjectCard
             masonryItem={item}
             title="Gerrymandering"
@@ -459,17 +345,11 @@ export default function Projects() {
                 </Link>.
             </>}
             tags={[
-                <TypeScript />,
-                "SolidJS",
+                [<TypeScript />, "TypeScript"],
+                [<SolidJS />, "SolidJS"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/gerrymandering"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/gerrymandering"
+        />
         <ProjectCard
             masonryItem={item}
             title="Fawlty at Fifty - The Legacy of Fawlty Towers (website)"
@@ -480,8 +360,8 @@ export default function Projects() {
                 </cite>.
             </>}
             tags={[
-                <TypeScript />,
-                "SolidJS",
+                [<TypeScript />, "TypeScript"],
+                [<SolidJS />, "SolidJS"],
             ]}
         />
         <ProjectCard
@@ -491,16 +371,10 @@ export default function Projects() {
                 The website you are looking at right now!
             </>}
             tags={[
-                <TypeScript />,
-                "SolidJS",
+                [<TypeScript />, "TypeScript"],
+                [<SolidJS />, "SolidJS"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/starwort.github.io"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
+            repoUrl="https://github.com/Starwort/starwort.github.io"
+        />
     </main>;
-};;
+};

@@ -1,10 +1,12 @@
 import {Title} from "@solidjs/meta";
 import {Launch} from "@suid/icons-material";
-import {Card, CardActions, CardContent, IconButton, Typography} from "@suid/material";
-import {ProjectCard} from "~/components/ProjectCard";
-import {C, GitHub, Python, Rust} from "~/extra_icons";
+import {Button, Card, CardActions, CardContent, Typography} from "@suid/material";
+import {Component} from "solid-js";
+import {ProjectCard, ProjectInfo} from "~/components/ProjectCard";
+import {C, Python, Rust} from "~/extra_icons";
 import {createMasonry} from "~/hooks/masonry";
 
+const AocCard: Component<Omit<ProjectInfo, "specialise">> = (props) => <ProjectCard {...props} specialise="AoC" />;
 
 export default function AdventOfCode() {
     const {item, container} = createMasonry();
@@ -25,16 +27,16 @@ export default function AdventOfCode() {
                 <Typography variant="body1">
                     Since 2022, I have also maintained leaderboards for code
                     golf solutions. I am currently working on moving from
-                    repositories into a dedicated website for this.
+                    repositories to having a dedicated website for this.
                 </Typography>
             </CardContent>
             <CardActions>
-                <IconButton component="a" href="https://adventofcode.com/">
-                    <Launch />
-                </IconButton>
+                <Button component="a" href="https://adventofcode.com/" endIcon={<Launch />}>
+                    Visit Advent of Code
+                </Button>
             </CardActions>
         </Card>
-        <ProjectCard
+        <AocCard
             masonryItem={item}
             title="2024"
             url="https://benediktwerner.github.io/aoc-leaderboard/#2024"
@@ -43,17 +45,11 @@ export default function AdventOfCode() {
                 over 274,000 participants.
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/advent-of-code-2024"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
-        <ProjectCard
+            repoUrl="https://github.com/Starwort/advent-of-code-2024"
+        />
+        <AocCard
             masonryItem={item}
             title="2024 - Golf"
             description={<>
@@ -61,17 +57,11 @@ export default function AdventOfCode() {
                 manage the leaderboard.
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/advent-of-code-golf-2024"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
-        <ProjectCard
+            repoUrl="https://github.com/Starwort/advent-of-code-golf-2024"
+        />
+        <AocCard
             masonryItem={item}
             title="2023"
             url="https://benediktwerner.github.io/aoc-leaderboard/#2023"
@@ -80,18 +70,12 @@ export default function AdventOfCode() {
                 307,000 participants.
             </>}
             tags={[
-                <Python />,
-                <Rust />,
+                [<Python />, "Python"],
+                [<Rust />, "Rust"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/advent-of-code-2023"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
-        <ProjectCard
+            repoUrl="https://github.com/Starwort/advent-of-code-2023"
+        />
+        <AocCard
             masonryItem={item}
             title="2023 - Golf"
             description={<>
@@ -99,17 +83,11 @@ export default function AdventOfCode() {
                 manage the leaderboard.
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/advent-of-code-golf-2023"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
-        <ProjectCard
+            repoUrl="https://github.com/Starwort/advent-of-code-golf-2023"
+        />
+        <AocCard
             masonryItem={item}
             title="2022"
             url="https://benediktwerner.github.io/aoc-leaderboard/#2022"
@@ -118,18 +96,12 @@ export default function AdventOfCode() {
                 307,000 participants.
             </>}
             tags={[
-                <Python />,
-                <Rust />,
+                [<Python />, "Python"],
+                [<Rust />, "Rust"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/advent-of-code-2022"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
-        <ProjectCard
+            repoUrl="https://github.com/Starwort/advent-of-code-2022"
+        />
+        <AocCard
             masonryItem={item}
             title="2022 - Golf"
             description={<>
@@ -137,17 +109,11 @@ export default function AdventOfCode() {
                 manage the leaderboard.
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/advent-of-code-golf-2022"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
-        <ProjectCard
+            repoUrl="https://github.com/Starwort/advent-of-code-golf-2022"
+        />
+        <AocCard
             masonryItem={item}
             title="2021"
             url="https://benediktwerner.github.io/aoc-leaderboard/#2021"
@@ -156,17 +122,11 @@ export default function AdventOfCode() {
                 over 219,000 participants.
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/advent-of-code-2021"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
-        <ProjectCard
+            repoUrl="https://github.com/Starwort/advent-of-code-2021"
+        />
+        <AocCard
             masonryItem={item}
             title="2020"
             url="https://benediktwerner.github.io/aoc-leaderboard/#2020"
@@ -175,17 +135,11 @@ export default function AdventOfCode() {
                 over 168,000 participants.
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/advent-of-code-2020"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
-        <ProjectCard
+            repoUrl="https://github.com/Starwort/advent-of-code-2020"
+        />
+        <AocCard
             masonryItem={item}
             title="2019"
             url="https://benediktwerner.github.io/aoc-leaderboard/#2019"
@@ -194,18 +148,12 @@ export default function AdventOfCode() {
                 116,000 participants.
             </>}
             tags={[
-                <Python />,
-                <C />,
+                [<Python />, "Python"],
+                [<C />, "C"],
             ]}
-        >
-            <IconButton
-                component="a"
-                href="https://github.com/Starwort/advent-of-code-2019"
-            >
-                <GitHub />
-            </IconButton>
-        </ProjectCard>
-        <ProjectCard
+            repoUrl="https://github.com/Starwort/advent-of-code-2019"
+        />
+        <AocCard
             masonryItem={item}
             title="2018"
             url="https://benediktwerner.github.io/aoc-leaderboard/#2018"
@@ -214,10 +162,10 @@ export default function AdventOfCode() {
                 over 100,000 participants.
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
         />
-        <ProjectCard
+        <AocCard
             masonryItem={item}
             title="2017"
             url="https://benediktwerner.github.io/aoc-leaderboard/#2017"
@@ -227,7 +175,7 @@ export default function AdventOfCode() {
                 2nd.
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
         />
     </main>;

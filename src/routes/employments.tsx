@@ -1,7 +1,7 @@
 import {Title} from "@solidjs/meta";
 import {Typography} from "@suid/material";
 import {ProjectCard} from "~/components/ProjectCard";
-import {CSharp, CXX, Haskell, JavaScript, Python, TypeScript} from "~/extra_icons";
+import {CSharp, CXX, Haskell, JavaScript, Python, SolidJS, TypeScript} from "~/extra_icons";
 import {createMasonry} from "~/hooks/masonry";
 
 export default function Education() {
@@ -9,13 +9,13 @@ export default function Education() {
     return <main use:container>
         <Title>My Employments</Title>
         <ProjectCard
-            title="Optellum Ltd. - Software Development Assistant"
+            title="Optellum Ltd."
             description={<>
                 <Typography variant="subtitle1" color="text.secondary" sx={{
                     mt: -1,
                     mb: 1,
                 }}>
-                    October 2018
+                    October 2018 &bull; Software Development Assistant
                 </Typography>
                 <Typography variant="body1" paragraph>
                     I worked here for my Year 11 Work Experience
@@ -29,18 +29,18 @@ export default function Education() {
                 </Typography>
             </>}
             tags={[
-                <Python />,
+                [<Python />, "Python"],
             ]}
             masonryItem={item}
         />
         <ProjectCard
-            title="Freelance - Full-Stack Web Developer"
+            title="Freelance"
             description={<>
                 <Typography variant="subtitle1" color="text.secondary" sx={{
                     mt: -1,
                     mb: 1,
                 }}>
-                    March 2020 - Present
+                    March 2020 &ndash; Present &bull; Full-Stack Web Developer
                 </Typography>
                 <Typography variant="body1">
                     I write front-end (web) and back-end (CRUD) code for a
@@ -49,19 +49,19 @@ export default function Education() {
                 </Typography>
             </>}
             tags={[
-                <Python />,
-                <JavaScript />,
+                [<Python />, "Python"],
+                [<JavaScript />, "JavaScript"],
             ]}
             masonryItem={item}
         />
         <ProjectCard
-            title="Code Ninjas Oxford - Code Sensei"
+            title="Code Ninjas Oxford"
             description={<>
                 <Typography variant="subtitle1" color="text.secondary" sx={{
                     mt: -1,
                     mb: 1,
                 }}>
-                    June 2021 - January 2023
+                    June 2021 &ndash; January 2023 &bull; Code Sensei
                 </Typography>
                 <Typography variant="body1">
                     I worked here part-time as a 'Code Sensei', the company's
@@ -75,22 +75,22 @@ export default function Education() {
                 </Typography>
             </>}
             tags={[
-                <JavaScript />,
-                <Python />,
-                <CSharp />,
-                <CXX />,
-                <TypeScript />,
+                [<JavaScript />, "JavaScript"],
+                [<Python />, "Python"],
+                [<CSharp />, "C#"],
+                [<CXX />, "C++"],
+                [<TypeScript />, "TypeScript"],
             ]}
             masonryItem={item}
         />
         <ProjectCard
-            title="Wood Green School, Witney - Tutor of Computing"
+            title="Wood Green School, Witney"
             description={<>
                 <Typography variant="subtitle1" color="text.secondary" sx={{
                     mt: -1,
                     mb: 1,
                 }}>
-                    September 2024 - May 2025
+                    September 2024 &ndash; May 2025 &bull; Tutor of Computing
                 </Typography>
                 <Typography variant="body1">
                     I worked here as an unqualified teacher, teaching a class of
@@ -101,20 +101,21 @@ export default function Education() {
                 </Typography>
             </>}
             tags={[
-                <Python />,
-                <Haskell />,
+                [<Python />, "Python"],
+                [<Haskell />, "Haskell"],
+                [<JavaScript />, "JavaScript"],
             ]}
             masonryItem={item}
         />
         <ProjectCard
-            title="Freelance - Web Developer"
+            title="Freelance"
             url="https://fawltyat50.co.uk/"
             description={<>
                 <Typography variant="subtitle1" color="text.secondary" sx={{
                     mt: -1,
                     mb: 1,
                 }}>
-                    May 2025 - Present
+                    May 2025 &ndash; Present &bull; Web Developer
                 </Typography>
                 <Typography variant="body1">
                     I designed and implemented a website for the book <cite>
@@ -125,8 +126,8 @@ export default function Education() {
                 </Typography>
             </>}
             tags={[
-                <TypeScript />,
-                "SolidJS",
+                [<TypeScript />, "TypeScript"],
+                [<SolidJS />, "SolidJS"],
             ]}
             masonryItem={item}
         />

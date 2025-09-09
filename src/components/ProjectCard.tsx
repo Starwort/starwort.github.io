@@ -1,15 +1,17 @@
 import {Launch} from "@suid/icons-material";
 import {Box, Card, CardActionArea, CardActions, CardContent, IconButton, Typography} from "@suid/material";
 import {Component, For, JSX, Show} from "solid-js";
+import {GitHub} from "~/extra_icons";
 import {Directive, MasonryItemDirective} from "~/hooks/masonry";
 
-interface ProjectInfo {
+export interface ProjectInfo {
     title: JSX.Element;
     url?: string;
+    repoUrl?: string;
     description: string | JSX.Element;
-    children?: JSX.Element;
-    tags: JSX.Element[];
+    tags: [JSX.Element, string][];
     masonryItem?: Directive<MasonryItemDirective>;
+    specialise?: "AoC" | "Edu";
 }
 
 const MaybeActionArea: Component<{
@@ -22,7 +24,7 @@ const MaybeActionArea: Component<{
 </Show>;
 
 export const ProjectCard: Component<ProjectInfo> = (props) => {
-    return <Card variant="elevation" sx={{gridColumn: "span 4"}} ref={props.masonryItem}>
+    return <Card variant="elevation" sx={{gridColumn: props.specialise == "Edu" ? "1/-1" : "span 4"}} ref={props.masonryItem}>
         <MaybeActionArea url={props.url}>
             <CardContent>
                 <Typography variant="h5" component="div" gutterBottom>
@@ -34,21 +36,38 @@ export const ProjectCard: Component<ProjectInfo> = (props) => {
             </CardContent>
         </MaybeActionArea>
         <CardActions>
-            {props.children}
+            <Show when={props.repoUrl}>
+                <IconButton
+                    component="a"
+                    href={props.repoUrl}
+                    title={props.specialise == "AoC"
+                        ? "Open this solution repository"
+                        : "Open the repository for this project"}
+                >
+                    <GitHub />
+                </IconButton>
+            </Show>
             <Show when={props.url}>
-                <IconButton component="a" href={props.url} target="_blank">
+                <IconButton
+                    component="a"
+                    href={props.url}
+                    target="_blank"
+                    title={props.specialise == "AoC"
+                        ? "Open this year's overall leaderboard in a new tab"
+                        : "Open this project in a new tab"}
+                >
                     <Launch />
                 </IconButton>
             </Show>
             <Box sx={{flexGrow: 1}} />
-            <For each={props.tags}>{tag => (
+            <For each={props.tags}>{([tag, title]) => (
                 <Box sx={{
                     p: 1,
                     ml: '0 !important',
                     display: "inline-flex",
                     alignItems: "center",
                     justifyContent: "center"
-                }}>
+                }} title={title}>
                     {tag}
                 </Box>
             )}</For>
