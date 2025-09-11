@@ -12,6 +12,14 @@ export default defineConfig({
         ]
     },
     server: {
-        prerender: {crawlLinks: true},
+        prerender: {
+            crawlLinks: true,
+            routes: ["/",
+                "/advent-of-code",
+                "/education",
+                "/employments",
+                "/projects"
+            ],
+        },
     }
 });
