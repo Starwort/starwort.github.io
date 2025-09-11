@@ -6,7 +6,7 @@ import {DarkMode, Folder, FolderOutlined, Favorite as Heart, LightMode, Menu as 
 import {AppBar, Box, CssBaseline, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, ThemeProvider, Toolbar, Typography, createPalette, createTheme, useMediaQuery} from "@suid/material";
 import {Show, Suspense, createEffect, createMemo, createSignal, onMount} from "solid-js";
 import styles from "./app.module.css";
-import {GitHub} from "./extra_icons";
+import {GitHub, LinkedIn} from "./extra_icons";
 import {loadFromStorage} from "./util";
 
 const Drawer = clientOnly(() => import("@suid/material/Drawer"));
@@ -185,6 +185,19 @@ export default function App() {
                                     </ListItemIcon>
                                     <ListItemText
                                         primary="My GitHub Profile"
+                                    />
+                                </ListItemButton>
+                            </ListItem>
+                            <ListItem disablePadding>
+                                <ListItemButton
+                                    component="a"
+                                    href="https://www.linkedin.com/in/toby-collier-6b6838255/"
+                                >
+                                    <ListItemIcon>
+                                        <LinkedIn />
+                                    </ListItemIcon>
+                                    <ListItemText
+                                        primary="My LinkedIn Profile"
                                     />
                                 </ListItemButton>
                             </ListItem>

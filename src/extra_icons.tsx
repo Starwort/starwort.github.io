@@ -6,6 +6,12 @@ export const GitHub = createSvgIcon(
     ),
     "GitHub"
 );
+export const LinkedIn = createSvgIcon(
+    () => (
+        <path d="M19 3a2 2 0 012 2V19a2 2 0 01-2 2H5A2 2 0 013 19V5A2 2 0 015 3zM6 18H9V11H6ZM7.5 9A1 1 0 007.5 6 1 1 0 007.5 9M11 18H13.5V13.5H16.5V18H19V13A2 2 0 0017 11H11Z" />
+    ),
+    'LinkedIn'
+);
 export const Kofi = createSvgIcon(
     () => (
         <path d="M2 17a2 2 0 002 2h12a2 2 0 002-2v-4h2a2 2 0 002-2V7a2 2 0 00-2-2H2zM18 7h2v4h-2Zm-8 9-4-4a1 1 0 014-3 1 1 0 014 3Z" />
