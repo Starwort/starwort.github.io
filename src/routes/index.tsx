@@ -20,9 +20,9 @@ export default function Index() {
                 as a place to share tidbits of information about myself.
             </Typography>
             <Typography variant="body1" paragraph>
-                I'm currently looking for work, so if you have any opportunities
-                available, please don't hesitate to <Link href="mailto:tcphone93@gmail.com">
-                    contact me via email
+                While I'm not currently looking for work, you can contact
+                me <Link href="mailto:tcphone93@gmail.com">
+                    via email
                 </Link> or on Discord @starwort.
             </Typography>
         </Box>
