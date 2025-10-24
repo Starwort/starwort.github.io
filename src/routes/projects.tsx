@@ -366,6 +366,18 @@ export default function Projects() {
         />
         <ProjectCard
             masonryItem={item}
+            title="Clock Clock"
+            description={<>
+                A clock made of clocks!
+            </>}
+            tags={[
+                [<TypeScript />, "TypeScript"],
+            ]}
+            repoUrl="https://github.com/Starwort/clock-clock"
+            url="https://starwort.github.io/clock-clock/"
+        />
+        <ProjectCard
+            masonryItem={item}
             title="This Website"
             description={<>
                 The website you are looking at right now!
