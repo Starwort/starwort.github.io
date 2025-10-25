@@ -30,7 +30,11 @@ export default function App() {
         })
     );
     const theme = createTheme({palette});
-    const drawerIsPersistent = typeof window === "undefined" ? () => true : useMediaQuery(theme.breakpoints.up("md"));
+    const [drawerPersistenceWrapper, setDrawerPersistenceWrapper] = createSignal<Accessor<boolean>>(() => false);
+    onMount(() => {
+        setDrawerPersistenceWrapper(() => useMediaQuery(theme.breakpoints.up("md")));
+    });
+    const drawerIsPersistent = () => drawerPersistenceWrapper()();
     const [persistentDrawerOpen, setPersistentDrawerOpen] = createSignal(true);
     const [temporaryDrawerOpen, setTemporaryDrawerOpen] = createSignal(false);
     createEffect(() => {
